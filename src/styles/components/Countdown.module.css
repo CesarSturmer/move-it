@@ -61,6 +61,30 @@
 }
 
 
-.countdownButton:hover {
+.countdownButton:not(:disabled):hover {
   background: var(--blue-dark)
+}
+
+.countdownButtonActive {
+  background: var(--white);
+  color: var(--title);
+}
+
+.countdownButtonActive:not(:disabled):hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+.countdownButton:disabled {
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
+.playCountdownImage {
+  width: 20px;
+  height: 20px;
+  left: 499px;
+  top: 636px;
+  margin-left: 1rem;
 }
