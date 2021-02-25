@@ -1,51 +1,24 @@
-import { useContext, useEffect, useState } from 'react';
-import { ChallengeContext } from '../contexts/ChallengeContext';
+import { useContext } from 'react';
+import { CountdowContext } from '../contexts/CountdowContext';
 import styles from '../styles/components/Countdown.module.css';
 
-let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
 
-  const { StartNewChallenge } = useContext(ChallengeContext);
-
-
-  const [time, setTime] = useState(0.1 * 60);
-  const [isActive, setIsActive] = useState(false);
-  const [hasFinished, setHasFinished] = useState(false);
-
-
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-
+  const { 
+    minutes, 
+    seconds, 
+    isActive, 
+    StartCountdown,
+    hasFinished, 
+    FinishCountdown } = useContext(CountdowContext);
 
   const [minuteLef, minutetRight] = String(minutes).padStart(2, '0').split('');
   const [secondLef, secondRight] = String(seconds).padStart(2, '0').split('');
 
-  function StartCountdown() {
-    setIsActive(true)
-  }
-
-  function FinishCountdown() {
-    clearTimeout(countdownTimeout)
-    setIsActive(false)
-    setTime(0.1 * 60);
-
-  }
-
-  //e quanto o time mudar e o active ele fica atualizando o hook
-  useEffect(() => {
-    if (isActive && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(time - 1);
-      }, 1000)
-    } else if (isActive && time === 0) {
-      setHasFinished(true);
-      setIsActive(false);
-      StartNewChallenge();
-    }
-  }, [isActive, time])
 
   return (
+
     <div>
       <div className={styles.countdownContainer}>
         <div>
@@ -67,7 +40,7 @@ export function Countdown() {
 
         >
           Ciclo Encerrado
-          <img src="icons/check.svg" alt="ciclo finalizado" className={styles.playCountdownImage}/>
+          <img src="icons/check.svg" alt="ciclo finalizado" className={styles.playCountdownImage} />
         </button>
       ) : (
           <>
