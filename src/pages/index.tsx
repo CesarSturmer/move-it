@@ -1,13 +1,18 @@
 import React from "react";
+import { useContext } from 'react';
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import style from '../styles/pages/Home.module.css';
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
+
 
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { Countdown } from "../components/Countdown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
+
 import { CountdownProvider } from "../contexts/CountdowContext";
 import { ChallengesProvider } from "../contexts/ChallengeContext";
 
@@ -15,21 +20,33 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
+  toggleTheme: boolean;
+
 }
 
-export default function Home(props:HomeProps) {
+export default function Home({ toggleTheme, ...rest }) {
+
+  const { colors, title } = useContext(ThemeContext);
+
+  const uncheckedHandleIcon = () => {
+    alert('fui clicado')
+  }
+
 
 
   return (
-    <ChallengesProvider 
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-      >
+
+    <ChallengesProvider
+      level={rest.level}
+      currentExperience={rest.currentExperience}
+      challengesCompleted={rest.challengesCompleted}
+    >
+
       <div className={style.container}>
         <Head>
           <title>Início | Moviet</title>
         </Head>
+
         <ExperienceBar />
 
         <CountdownProvider>
@@ -45,6 +62,34 @@ export default function Home(props:HomeProps) {
             </div>
           </section>
         </CountdownProvider>
+
+        <footer className={style.footer}>
+
+          <Switch
+            onChange={toggleTheme}
+            checked={title === 'dark'}
+            checkedIcon={true}
+            height={10}
+            width={36}
+            handleDiameter={20}
+            offHandleColor={colors.text}
+            onHandleColor={colors.textHighlight}
+            offColor={colors.grayLine}
+            onColor={colors.text}
+            uncheckedIcon={false}
+            uncheckedHandleIcon={
+              <div className={style.buttonMode}>
+                <img src="icons/sun.svg" alt="" />
+              </div>
+            }
+            checkedHandleIcon={
+              <div className={style.buttonMode}>
+                 <img src="icons/moon.svg" alt="" />
+              </div>
+            }
+
+          />
+        </footer>
 
       </div>
     </ChallengesProvider>

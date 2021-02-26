@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-evenly;
 
-  background: var(--white);
+  background: var(--bodyColor);
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   font-size: 8.5rem;
@@ -27,10 +27,11 @@
 }
 
 .countdownContainer > div span:first-child {
-  border-right: 1px solid #f0f1f3 ;
+  border-right: 1px solid var(--gray-line);
 }
-.countdownContainer > div span:-child {
-  border-right: 1px solid #f0f1f3 ;
+
+.countdownContainer > div span:last-child {
+  border-right: 1px solid var(--gray-line);
 }
 
 .countdownContainer > span {
@@ -52,7 +53,7 @@
   border-radius: 5px;
 
   background: var(--blue);
-  color: var(--white);
+  color: var(--bodyColor);
 
   font-size: 1.25rem;
   font-weight: 600;
@@ -60,26 +61,34 @@
   transition: background-color 0.2s;
 }
 
-
 .countdownButton:not(:disabled):hover {
   background: var(--blue-dark)
 }
 
+.countdownButton:disabled {
+  background: var(--bodyColor);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
 .countdownButtonActive {
-  background: var(--white);
+  background: var(--bodyColor);
   color: var(--title);
 }
 
 .countdownButtonActive:not(:disabled):hover {
+  color: var(--bodyColor);
   background: var(--red);
-  color: var(--white);
 }
 
-.countdownButton:disabled {
-  background: var(--white);
-  color: var(--text);
-  cursor: not-allowed;
+.countdownButtonActive:not(:disabled):hover img {
+  filter: var(--invert-white);
 }
+
+.countdownButtonStart:not(:disabled) img {
+  filter: var(--invert-white);
+}
+
 
 .playCountdownImage {
   width: 20px;

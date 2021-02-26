@@ -16,7 +16,7 @@
 
 .container {
 
-  background: var(--white);
+  background: var(--bodyColor);
   width: 100%;
   max-width: 400px;
   padding: 2rem 3rem;
