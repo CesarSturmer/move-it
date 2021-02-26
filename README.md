@@ -1,7 +1,8 @@
 # movieit
 <h1>
   projeto da imersão  NLW com React da ROCKETSEAT
-  <img alt="capa do projeto" title="move.it src="https://imgur.com/uY4kanZ.jpg" />
+  
+   <a href="https://imgur.com/uY4kanZ.jpg" />                                                                            
 </h1>
 
 
