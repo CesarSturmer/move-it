@@ -44,7 +44,7 @@ export default function Home({ toggleTheme, ...rest }) {
 
       <div className={style.container}>
         <Head>
-          <title>Início | Moviet</title>
+          <title>Início | Move.It</title>
         </Head>
 
         <ExperienceBar />
