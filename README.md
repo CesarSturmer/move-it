@@ -1,17 +1,22 @@
 # movieit
-projeto da imersão  NLW com React da ROCKETSEAT
+<h1>
+  projeto da imersão  NLW com React da ROCKETSEAT
+  <img alt="capa do projeto" title="move.it src="https://imgur.com/uY4kanZ.jpg" />
+</h1>
+
+
 
 
 # About 📃
-Aplicação desenvolvida é um cronômetro para utilizar a técnica <a href="https://www.google.com/search?kgmid=/m/0b6gcp8&hl=pt-BR&q=T%C3%A9cnica+pomodoro&kgs=7eb54a9a0a36e478&shndl=0&source=sh/x/kp&entrypoint=sh/x/kp">POMODORO </a>
-para o final de cada ciclo o usuário receba um desafio de um exercício.
+A Aplicação desenvolvida é um cronômetro para utilizar  a técnica <a href="https://www.google.com/search?kgmid=/m/0b6gcp8&hl=pt-BR&q=T%C3%A9cnica+pomodoro&kgs=7eb54a9a0a36e478&shndl=0&source=sh/x/kp&entrypoint=sh/x/kp">POMODORO </a>
+para o final de cada ciclo o usuário receba um desafio de um exercício. Pensando em ajudar a diminuir as chances de uma lesão ou uma doença futura por falta de se movimentar.
 
 
 Projeto desenvolvido duruante o evento NLW#04 - Trilha de React da <a href="https://rocketseat.com.br"> ROCKETSEAT </a> crianda essa aplicação web.
 
 
 # Tecnologias  🚀
-This project was developed using the following technologies:
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org)
@@ -19,7 +24,7 @@ This project was developed using the following technologies:
 
 ## 🔥 Preview
 
-[![Deploy with Vercel](https://vercel.com/button)](https://movieit-cesar-sturmer.vercel.app/)
+[![Deploy with Vercel](https://vercel.com/button)](https://moveit-cesar-sturmer.vercel.app/)
 
 ## 🚀 Getting started
 
