@@ -1,4 +1,4 @@
-# movieit
+# Move - It
 <h1>
   projeto da imersão  NLW com React da ROCKETSEAT                                                                             
 </h1>
