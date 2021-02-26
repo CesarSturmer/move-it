@@ -48,7 +48,6 @@ export default function Home({ toggleTheme, ...rest }) {
         </Head>
 
         <ExperienceBar />
-        
 
         <CountdownProvider>
           <section>
