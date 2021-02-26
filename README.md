@@ -1,10 +1,9 @@
 # movieit
 <h1>
-  projeto da imersão  NLW com React da ROCKETSEAT
-  
-   <a href="https://imgur.com/uY4kanZ.jpg" />                                                                            
+  projeto da imersão  NLW com React da ROCKETSEAT                                                                             
 </h1>
-
+<img alt="Move.it" title="Move.it" src="https://imgur.com/uY4kanZ.png" />
+<img alt="Move.it" title="Move.it" src="https://imgur.com/qoJwFm1.png" />
 
 
 
